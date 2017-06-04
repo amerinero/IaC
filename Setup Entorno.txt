@@ -12,6 +12,8 @@ git config --global user.email johndoe@example.com
 
 * Si no va probar sin --global
 
+git init (en el directorio del proyecto)
+
 
 Configurar Atom para usar Git
 =============================
@@ -37,7 +39,7 @@ git config --global user.email johndoe@example.com
 
 Estas dos ultimas las he hecho desde la linea de comandos con git, con el git plus no iban
 
-- git remote add origin https://github.com/amerinero/Repo1.git
+- git remote add origin https://github.com/amerinero/IaC.git
 
 - git push -u origin master
 

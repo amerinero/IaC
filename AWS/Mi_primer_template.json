@@ -1,0 +1,21 @@
+{
+  "AWSTemplateFormatVersion" : "2010-09-09",
+
+  "Description" : "Mi primer intento de crear algo con CloudFormation",
+
+  "Parameters" : {
+      "myKeyPair" : {
+      "Description" : "Amazon EC2 Key Pair",
+      "Type" : "AWS::EC2::KeyPair::KeyName",
+      "Default" : "EC2Key"
+    }
+  },
+
+  "Resources" : {
+    set of resources
+  },
+
+  "Outputs" : {
+    set of outputs
+  }
+}
