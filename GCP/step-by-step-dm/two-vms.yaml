@@ -1,0 +1,39 @@
+resources:
+  - name: the-first-vm
+    type: compute.v1.instance
+    properties:
+      zone: us-central1-f
+      machineType: https://www.googleapis.com/compute/v1/projects/long-victor-169809/zones/us-central1-f/machineTypes/f1-micro
+      disks:
+      - deviceName: boot
+        type: PERSISTENT
+        boot: true
+        autoDelete: true
+        initializeParams:
+          sourceImage: https://www.googleapis.com/compute/v1/projects/debian-cloud/global/images/debian-8-jessie-v20160301
+      networkInterfaces:
+        - network: $(ref.a-new-network.selfLink)
+          accessConfigs:
+          - name: External NAT
+            type: ONE_TO_ONE_NAT
+  - name: the-second-vm
+    type: compute.v1.instance
+    properties:
+      zone: us-central1-f
+      machineType: https://www.googleapis.com/compute/v1/projects/long-victor-169809/zones/us-central1-f/machineTypes/f1-micro
+      disks:
+      - deviceName: boot
+        type: PERSISTENT
+        boot: true
+        autoDelete: true
+        initializeParams:
+          sourceImage: https://www.googleapis.com/compute/v1/projects/debian-cloud/global/images/debian-8-jessie-v20160301
+      networkInterfaces:
+        - network: $(ref.a-new-network.selfLink)
+          accessConfigs:
+          - name: External NAT
+            type: ONE_TO_ONE_NAT
+  - name: a-new-network
+    type: compute.v1.network
+    properties:
+      IPv4Range: 10.0.0.1/16

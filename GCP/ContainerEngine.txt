@@ -1,0 +1,39 @@
+# Comandos y procedimientos usado en el tutorial Google Container Engine
+
+En este tutorial aprenderás a usar Google Cloud Shell para implementar una imagen de contenedor prediseñada de Docker con una sencilla aplicación de ejemplo de Node.js.
+
+Proyecto GCP == long-victor-169809
+
+Crear un nuevo cluster de contenedores. mi cluster se llama "kubercluster-01"
+Se te facturarán los 3 nodos (instancias de VM) de tu clúster
+
+## Desde Google Cloud Shell
+
+# Nos descargamos la aplicación dockerizada de ejemplo.
+TUTORIALDIR=~/src/long-victor-169809/gke_quickstart-2017-06-06-09-30
+git clone https://github.com/GoogleCloudPlatform/nodejs-docs-samples.git $TUTORIALDIR
+cd $TUTORIALDIR/containerengine/hello-world
+
+# obtenemos las credenciales del kubecluster-01
+gcloud container clusters get-credentials kubercluster-01 --zone europe-west1-b
+
+# Compilamos (ese gcr.io es importante ... si ponemos otra cosa no autoriza el push)
+docker build -t gcr.io/long-victor-169809/hello-node:v1 $PWD
+gcloud docker -- push gcr.io/long-victor-169809/hello-node:v1
+
+# Lo ponemos en ejecución
+kubectl run hello-node --image=gcr.io/long-victor-169809/hello-node:v1 --port=8080
+kubectl expose deployment hello-node --type="LoadBalancer"
+kubectl get service hello-node --watch
+
+# Hacemos que corran 4 replicas
+kubectl scale deployment hello-node --replicas=4
+kubectl get deployment
+kubectl get pods
+
+# Hacemos una modificación y la publicamos
+sed -i -e 's/!/ Version 2!/g' server.js
+docker build -t gcr.io/long-victor-169809/hello-node:v2 $PWD
+gcloud docker -- push gcr.io/long-victor-169809/hello-node:v2
+kubectl set image deployment/hello-node hello-node=gcr.io/long-victor-169809/hello-node:v2
+kubectl get service hello-node
