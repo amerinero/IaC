@@ -1,0 +1,2 @@
+ec2-metadata -z
+curl -v -s -w %{time_total}\\n -o /dev/null http://www.elcorteingles.es
