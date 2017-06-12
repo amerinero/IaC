@@ -6,16 +6,16 @@ Objetivos:
  Aprender a usar AWS y GCP.
 
 demoApp:
-    Aplicación Web que muestra en un mapa mundi los tiempos de respuesta de http://www.elcorteingles.es desde varias localizaciones a nivel mundial.
+    Aplicación Web que muestra en un mapa mundi los tiempos de respuesta de https://www.elcorteingles.es desde varias localizaciones a nivel mundial.
 
     Servidor principal:
-    1 instancia permanentemente levantada. Este sera el servidor web que muestre el mapa mundi y recoga los tiempos de una cola en la cual las sondas las dejaran.
+    1 instancia permanentemente levantada. Este sera el servidor web que muestre el mapa mundi y recoga los tiempos que se enviaran desde las sondas.
     La web tambien tendra un botón de refresco ... este botón desencadenara la creación de las sondas.
 
     Sondas:
     n instancias. Una por cada localización posible de la nube publica en la que estemos trabajando.
     Las sondas se crearan, ejecutaran los comandos:
-       - curl -v -s -w %{time_total}\\n -o /dev/null http://www.elcorteingles.es
+       - curl -v -s -w %{time_total} -o /dev/null https://www.elcorteingles.es
        - ec2-metadata -z (GCP aun no se como se hara esto)
-    Enviaran los resultados a la cola y se autodestruiran.
+    Enviaran los resultados al servidor principal y se autodestruiran.
     Vamos que las instancias de las sondas solo sobreviven el tiempo de ejecutar la prueba y enviar los resultados. Hay que crearlas y ponerlas en marcha mediante automatizacion. Cloudformation en AWS y AunNoSeComo en GCP.
