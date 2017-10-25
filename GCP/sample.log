@@ -1,0 +1,27 @@
+Oct 26 07:35:08 MX3750006dc0458 anacron[5678]: Job `cron.daily' terminated
+Oct 26 07:40:01 MX3750006dc0458 anacron[5678]: Job `cron.weekly' started
+Oct 26 07:40:01 MX3750006dc0458 anacron[6667]: Updated timestamp for job `cron.weekly' to 2017-10-26
+Oct 26 07:40:14 MX3750006dc0458 anacron[5678]: Job `cron.weekly' terminated
+Oct 26 07:40:14 MX3750006dc0458 anacron[5678]: Normal exit (2 jobs run)
+Oct 26 07:45:01 MX3750006dc0458 CRON[6784]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Oct 26 07:55:01 MX3750006dc0458 CRON[6896]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Oct 26 08:00:01 MX3750006dc0458 CRON[6960]: (root) CMD (/opt/McAfee/agent/scripts/ma checkhealth >/dev/null 2>/dev/null)
+Oct 26 08:00:01 MX3750006dc0458 systemd[1]: Started Session 648 of user mfe.
+Oct 26 08:05:01 MX3750006dc0458 CRON[7043]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Oct 26 08:15:01 MX3750006dc0458 CRON[7166]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Oct 26 08:17:01 MX3750006dc0458 CRON[7192]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Oct 26 08:25:01 MX3750006dc0458 CRON[7278]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Oct 26 08:30:01 MX3750006dc0458 CRON[7346]: (root) CMD (/opt/McAfee/agent/scripts/ma checkhealth >/dev/null 2>/dev/null)
+Oct 26 08:30:01 MX3750006dc0458 systemd[1]: Started Session 653 of user mfe.
+Oct 26 08:35:01 MX3750006dc0458 CRON[7428]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Oct 26 08:45:01 MX3750006dc0458 CRON[7580]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Oct 26 08:55:01 MX3750006dc0458 CRON[7691]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Oct 26 08:57:29 MX3750006dc0458 snapd[1089]: 2017/10/26 08:57:29.259407 snapmgr.go:429: No snaps to auto-refresh found
+Oct 26 09:00:01 MX3750006dc0458 CRON[7756]: (root) CMD (/opt/McAfee/agent/scripts/ma checkhealth >/dev/null 2>/dev/null)
+Oct 26 09:00:01 MX3750006dc0458 systemd[1]: Started Session 657 of user mfe.
+Oct 26 09:05:01 MX3750006dc0458 CRON[7839]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Oct 26 09:15:01 MX3750006dc0458 CRON[7969]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Oct 26 09:17:01 MX3750006dc0458 CRON[8000]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Oct 26 09:25:01 MX3750006dc0458 CRON[8123]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Oct 26 09:30:01 MX3750006dc0458 CRON[8261]: (root) CMD (/opt/McAfee/agent/scripts/ma checkhealth >/dev/null 2>/dev/null)
+Oct 26 09:30:01 MX3750006dc0458 systemd[1]: Started Session 662 of user mfe.
