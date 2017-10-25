@@ -1,0 +1,11 @@
+En el portatil del curro (Ubuntu).
+
+Con gsutil podemos subir/bajar ficheros al Storage tipo S3 de GCP
+  gsutil ls gs://corefiles
+  gsutil ls
+  gsutil cp cp-emea-onboard-madrid-presentation.pdf gs://corefiles/Cliente001/
+
+
+Para enlazar una shell (o sesión shell) con el proyecto UNIX-LogsGraphs
+
+  export GOOGLE_APPLICATION_CREDENTIALS=/home/u66454018/Downloads/UNIX-LogsGraphs-6c2610c3b33b.json
