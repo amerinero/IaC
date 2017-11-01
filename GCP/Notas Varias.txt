@@ -9,3 +9,10 @@ Con gsutil podemos subir/bajar ficheros al Storage tipo S3 de GCP
 Para enlazar una shell (o sesión shell) con el proyecto UNIX-LogsGraphs
 
   export GOOGLE_APPLICATION_CREDENTIALS=/home/u66454018/Downloads/UNIX-LogsGraphs-6c2610c3b33b.json
+
+  En mi windows de casa
+    export GOOGLE_APPLICATION_CREDENTIALS=C:\Users\AlbertoM\Dropbox\IaC\GCP\UNIX-LogsGraphs-32a2497288e0.json
+
+
+ C:\Users\AlbertoM\Downloads\google-cloud-sdk\bin
+  C:\Users\AlbertoM\google-cloud-sdk\bin

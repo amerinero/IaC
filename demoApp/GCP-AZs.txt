@@ -1,3 +1,5 @@
+Sacado de https://cloud.google.com/compute/docs/regions-zones/regions-zones
+
 us-central1	Iowa	Council Bluffs, Iowa, USA
   us-central1-a
   us-central1-b
