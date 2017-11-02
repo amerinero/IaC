@@ -1,0 +1,5 @@
+Oct 26 07:35:08 MX3750006dc0458 anacron[5678]: Job `cron.daily' terminated
+Oct 26 07:40:01 MX3750006dc0458 anacron[5678]: Job `cron.weekly' started
+Oct 26 07:40:01 MX3750006dc0458 anacron[6667]: Updated timestamp for job `cron.weekly' to 2017-10-26
+Oct 26 07:40:14 MX3750006dc0458 anacron[5678]: Job `cron.weekly' terminated
+Oct 26 07:40:14 MX3750006dc0458 anacron[5678]: Normal exit (2 jobs run)
