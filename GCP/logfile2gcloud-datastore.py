@@ -18,19 +18,20 @@ def log2cloud (client,type,line):
     hour  = Combine(ints + ":" + ints + ":" + ints)
     timestamp = month + day + hour
     hostname = Word(alphas + nums + "_" + "-" + ".")
-    appname = Word(alphas + "/" + "-" + "_" + ".") + Optional(Suppress("[") + ints + Suppress("]")) + Suppress(":")
+    appname = Word(alphas + nums + "/" + "-" + "_" + ".") + Optional(Suppress("[") + ints + Suppress("]")) + Suppress(":")
     message = Regex(".*")
     logline = timestamp + hostname + appname + message
     mess_prueba = "Oct 28 08:30:01 MX3750006dc0458 systemd[1]: Started Session 653 of user mfe."
-    datefmt = '%Y%b%d%H:%M:%S'
-    Year='2017'
+    datefmt = '%Y %b %d %H:%M:%S'
+    Year=2017
     timezone=pytz.timezone("CET")
     campos = logline.parseString(line)
     # for i in range(len(campos)):
     #     print ("Campo[",i,"]=",campos[i])
-    #
-    # print (Year+campos[0]+campos[1]+campos[2])
-    fecha = datetime.datetime.strptime(Year+campos[0]+campos[1]+campos[2],datefmt)
+
+    fechastr="%d %s %02d %s" % (Year,campos[0],int(campos[1]),campos[2])
+    # print (fechastr)
+    fecha = datetime.datetime.strptime(fechastr,datefmt)
     #fecha.tzinfo=CET
     # print (fecha)
     fechatz = timezone.localize(fecha)
@@ -39,7 +40,7 @@ def log2cloud (client,type,line):
 
     key = client.key(type)
     logline_db = datastore.Entity(
-        key, exclude_from_indexes=['Mensaje'])
+         key, exclude_from_indexes=['Mensaje'])
 
     logline_db.update({
          'Fecha': fechatz,
@@ -57,7 +58,7 @@ def log2cloud (client,type,line):
 #    print ("Campo[",i,"]=",campos[i])
 Linea ="Oct 30 08:30:01 MX3750006dc0458 systemd[1]: Started Session 653 of user mfe."
 client = datastore.Client('unix-logsgraphs')
-with open('./sample.log') as syslogFile:
+with open('./hoy.log') as syslogFile:
   for line in syslogFile:
       print line
       log2cloud (client,'LogMensaje',line)

@@ -1,0 +1,217 @@
+Nov  2 07:35:04 MX3750006dc0458 anacron[22203]: Job `cron.daily' terminated
+Nov  2 07:40:01 MX3750006dc0458 anacron[22203]: Job `cron.weekly' started
+Nov  2 07:40:02 MX3750006dc0458 anacron[22659]: Updated timestamp for job `cron.weekly' to 2017-11-02
+Nov  2 07:40:16 MX3750006dc0458 anacron[22203]: Job `cron.weekly' terminated
+Nov  2 07:45:01 MX3750006dc0458 CRON[22784]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 07:45:01 MX3750006dc0458 anacron[22203]: Job `cron.monthly' started
+Nov  2 07:45:02 MX3750006dc0458 anacron[22203]: Job `cron.monthly' terminated
+Nov  2 07:45:02 MX3750006dc0458 anacron[22203]: Normal exit (3 jobs run)
+Nov  2 07:55:01 MX3750006dc0458 CRON[22920]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 08:00:01 MX3750006dc0458 CRON[22979]: (root) CMD (/opt/McAfee/agent/scripts/ma checkhealth >/dev/null 2>/dev/null)
+Nov  2 08:00:01 MX3750006dc0458 systemd[1]: Started Session 2204 of user mfe.
+Nov  2 08:05:01 MX3750006dc0458 CRON[23056]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 08:15:01 MX3750006dc0458 CRON[23193]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 08:17:01 MX3750006dc0458 CRON[23222]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Nov  2 08:25:01 MX3750006dc0458 CRON[23325]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 08:30:01 MX3750006dc0458 CRON[23390]: (root) CMD (/opt/McAfee/agent/scripts/ma checkhealth >/dev/null 2>/dev/null)
+Nov  2 08:30:01 MX3750006dc0458 systemd[1]: Started Session 2209 of user mfe.
+Nov  2 08:35:01 MX3750006dc0458 CRON[23467]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 08:45:01 MX3750006dc0458 CRON[23647]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 08:55:01 MX3750006dc0458 CRON[23794]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 09:00:01 MX3750006dc0458 CRON[23861]: (root) CMD (/opt/McAfee/agent/scripts/ma checkhealth >/dev/null 2>/dev/null)
+Nov  2 09:00:01 MX3750006dc0458 systemd[1]: Started Session 2213 of user mfe.
+Nov  2 09:05:01 MX3750006dc0458 CRON[23964]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 09:15:01 MX3750006dc0458 CRON[24110]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 09:17:01 MX3750006dc0458 CRON[24141]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Nov  2 09:25:01 MX3750006dc0458 CRON[24326]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 09:26:50 MX3750006dc0458 systemd[1]: Starting Cleanup of Temporary Directories...
+Nov  2 09:26:50 MX3750006dc0458 systemd-tmpfiles[24374]: [/usr/lib/tmpfiles.d/var.conf:14] Duplicate line for path "/var/log", ignoring.
+Nov  2 09:26:50 MX3750006dc0458 systemd[1]: Started Cleanup of Temporary Directories.
+Nov  2 09:30:01 MX3750006dc0458 CRON[24439]: (root) CMD (/opt/McAfee/agent/scripts/ma checkhealth >/dev/null 2>/dev/null)
+Nov  2 09:30:01 MX3750006dc0458 systemd[1]: Started Session 2218 of user mfe.
+Nov  2 09:30:28 MX3750006dc0458 gnome-session[11595]: (dropbox:11860): LIBDBUSMENU-GLIB-WARNING **: About to Show called on an item wihtout submenus.  We're ignoring it.
+Nov  2 09:30:30 MX3750006dc0458 gnome-session[11595]: Gtk-Message: GtkDialog mapped without a transient parent. This is discouraged.
+Nov  2 09:31:06 MX3750006dc0458 gnome-session[11595]: [09:31:06:751] [11768:12870] [ERROR][com.freerdp.core.rdp] - rdp_recv_tpkt_pdu: rdp_recv_deactivate_all() fail
+Nov  2 09:31:06 MX3750006dc0458 gnome-session[11595]: [09:31:06:751] [11768:12870] [ERROR][com.freerdp.core.transport] - transport_check_fds: transport->ReceiveCallback() - -1
+Nov  2 09:31:06 MX3750006dc0458 gnome-session[11595]: [09:31:06:751] [11768:12870] [ERROR][com.freerdp.core] - freerdp_check_fds() failed - 0
+Nov  2 09:31:06 MX3750006dc0458 gnome-session[11595]: Failed to check FreeRDP event handles
+Nov  2 09:31:06 MX3750006dc0458 gnome-session[11595]: Gtk-Message: GtkDialog mapped without a transient parent. This is discouraged.
+Nov  2 09:35:01 MX3750006dc0458 CRON[24674]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 09:45:01 MX3750006dc0458 CRON[24889]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 09:55:01 MX3750006dc0458 CRON[25057]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 09:57:30 MX3750006dc0458 ocserv[1589]: main: refreshed cookie key
+Nov  2 10:00:01 MX3750006dc0458 CRON[25149]: (root) CMD (/opt/McAfee/agent/scripts/ma checkhealth >/dev/null 2>/dev/null)
+Nov  2 10:00:01 MX3750006dc0458 systemd[1]: Started Session 2222 of user mfe.
+Nov  2 10:05:01 MX3750006dc0458 CRON[25245]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 10:15:01 MX3750006dc0458 CRON[25420]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 10:17:01 MX3750006dc0458 CRON[25463]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Nov  2 10:25:01 MX3750006dc0458 CRON[25779]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 10:30:01 MX3750006dc0458 CRON[25922]: (root) CMD (/opt/McAfee/agent/scripts/ma checkhealth >/dev/null 2>/dev/null)
+Nov  2 10:30:01 MX3750006dc0458 systemd[1]: Started Session 2227 of user mfe.
+Nov  2 10:34:10 MX3750006dc0458 gnome-session[11595]: [10:34:10:557] [11768:24471] [ERROR][com.freerdp.core.rdp] - rdp_recv_tpkt_pdu: rdp_recv_deactivate_all() fail
+Nov  2 10:34:10 MX3750006dc0458 gnome-session[11595]: [10:34:10:557] [11768:24471] [ERROR][com.freerdp.core.transport] - transport_check_fds: transport->ReceiveCallback() - -1
+Nov  2 10:34:10 MX3750006dc0458 gnome-session[11595]: [10:34:10:557] [11768:24471] [ERROR][com.freerdp.core] - freerdp_check_fds() failed - 0
+Nov  2 10:34:10 MX3750006dc0458 gnome-session[11595]: Failed to check FreeRDP event handles
+Nov  2 10:35:01 MX3750006dc0458 CRON[26056]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 10:37:19 MX3750006dc0458 gnome-session[11595]: Gtk-Message: GtkDialog mapped without a transient parent. This is discouraged.
+Nov  2 10:43:25 MX3750006dc0458 org.gnome.evolution.dataserver.Calendar7[11422]: libecal-Message: e_cal_recur_generate_instances_of_rule(): bogus component, does not have DTSTART.  Skipping...
+Nov  2 10:43:43 MX3750006dc0458 org.gnome.evolution.dataserver.Calendar7[11422]: message repeated 5 times: [ libecal-Message: e_cal_recur_generate_instances_of_rule(): bogus component, does not have DTSTART.  Skipping...]
+Nov  2 10:45:01 MX3750006dc0458 CRON[26558]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 10:55:01 MX3750006dc0458 CRON[26910]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 11:00:01 MX3750006dc0458 CRON[27041]: (root) CMD (/opt/McAfee/agent/scripts/ma checkhealth >/dev/null 2>/dev/null)
+Nov  2 11:00:01 MX3750006dc0458 systemd[1]: Started Session 2231 of user mfe.
+Nov  2 11:05:01 MX3750006dc0458 CRON[27171]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 11:15:01 MX3750006dc0458 CRON[27529]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 11:17:01 MX3750006dc0458 CRON[27595]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Nov  2 11:25:01 MX3750006dc0458 CRON[27793]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 11:27:50 MX3750006dc0458 systemd[1]: Starting Daily apt download activities...
+Nov  2 11:27:50 MX3750006dc0458 systemd[1]: Started Daily apt download activities.
+Nov  2 11:30:01 MX3750006dc0458 CRON[27951]: (root) CMD (/opt/McAfee/agent/scripts/ma checkhealth >/dev/null 2>/dev/null)
+Nov  2 11:30:01 MX3750006dc0458 systemd[1]: Started Session 2236 of user mfe.
+Nov  2 11:35:01 MX3750006dc0458 CRON[28085]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 11:45:01 MX3750006dc0458 CRON[28370]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 11:55:01 MX3750006dc0458 CRON[28727]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 12:00:01 MX3750006dc0458 CRON[28958]: (root) CMD (/opt/McAfee/agent/scripts/ma checkhealth >/dev/null 2>/dev/null)
+Nov  2 12:00:01 MX3750006dc0458 systemd[1]: Started Session 2240 of user mfe.
+Nov  2 12:05:01 MX3750006dc0458 CRON[29179]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 12:15:01 MX3750006dc0458 CRON[29512]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 12:17:01 MX3750006dc0458 CRON[29580]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Nov  2 12:25:01 MX3750006dc0458 CRON[29941]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 12:30:01 MX3750006dc0458 CRON[30184]: (root) CMD (/opt/McAfee/agent/scripts/ma checkhealth >/dev/null 2>/dev/null)
+Nov  2 12:30:01 MX3750006dc0458 systemd[1]: Started Session 2245 of user mfe.
+Nov  2 12:35:01 MX3750006dc0458 CRON[30467]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 12:36:50 MX3750006dc0458 systemd[1]: Starting Automatically fetch and run repair assertions...
+Nov  2 12:36:50 MX3750006dc0458 snap-repair[30518]: error: cannot use snap-repair on a classic system
+Nov  2 12:36:50 MX3750006dc0458 systemd[1]: Started Automatically fetch and run repair assertions.
+Nov  2 12:38:41 MX3750006dc0458 tprdp[30604]: no named socket found to bridge to, abort.
+Nov  2 12:39:49 MX3750006dc0458 tprdp[30760]: no named socket found to bridge to, abort.
+Nov  2 12:45:01 MX3750006dc0458 CRON[31062]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 12:55:01 MX3750006dc0458 CRON[31387]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 13:00:01 MX3750006dc0458 CRON[31562]: (root) CMD (/opt/McAfee/agent/scripts/ma checkhealth >/dev/null 2>/dev/null)
+Nov  2 13:00:01 MX3750006dc0458 systemd[1]: Started Session 2249 of user mfe.
+Nov  2 13:05:01 MX3750006dc0458 CRON[31754]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 13:15:01 MX3750006dc0458 CRON[31983]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 13:17:01 MX3750006dc0458 CRON[32031]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Nov  2 13:25:01 MX3750006dc0458 CRON[32175]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 13:30:01 MX3750006dc0458 CRON[32283]: (root) CMD (/opt/McAfee/agent/scripts/ma checkhealth >/dev/null 2>/dev/null)
+Nov  2 13:30:01 MX3750006dc0458 systemd[1]: Started Session 2254 of user mfe.
+Nov  2 13:35:01 MX3750006dc0458 CRON[32400]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 13:43:24 MX3750006dc0458 org.gnome.evolution.dataserver.Calendar7[11422]: libecal-Message: e_cal_recur_generate_instances_of_rule(): bogus component, does not have DTSTART.  Skipping...
+Nov  2 13:43:25 MX3750006dc0458 org.gnome.evolution.dataserver.Calendar7[11422]: message repeated 2 times: [ libecal-Message: e_cal_recur_generate_instances_of_rule(): bogus component, does not have DTSTART.  Skipping...]
+Nov  2 13:45:01 MX3750006dc0458 CRON[32672]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 13:55:01 MX3750006dc0458 CRON[381]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 13:59:10 MX3750006dc0458 ocserv[1589]: main: refreshed cookie key
+Nov  2 14:00:01 MX3750006dc0458 CRON[511]: (root) CMD (/opt/McAfee/agent/scripts/ma checkhealth >/dev/null 2>/dev/null)
+Nov  2 14:00:01 MX3750006dc0458 systemd[1]: Started Session 2258 of user mfe.
+Nov  2 14:05:01 MX3750006dc0458 CRON[622]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 14:15:01 MX3750006dc0458 CRON[775]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 14:17:01 MX3750006dc0458 CRON[816]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Nov  2 14:25:01 MX3750006dc0458 CRON[998]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 14:30:01 MX3750006dc0458 CRON[1294]: (root) CMD (/opt/McAfee/agent/scripts/ma checkhealth >/dev/null 2>/dev/null)
+Nov  2 14:30:03 MX3750006dc0458 systemd[1]: Started Session 2263 of user mfe.
+Nov  2 14:35:01 MX3750006dc0458 CRON[1537]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 14:45:01 MX3750006dc0458 CRON[1861]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 14:55:01 MX3750006dc0458 CRON[2309]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 15:00:01 MX3750006dc0458 CRON[2454]: (root) CMD (/opt/McAfee/agent/scripts/ma checkhealth >/dev/null 2>/dev/null)
+Nov  2 15:00:01 MX3750006dc0458 systemd[1]: Started Session 2267 of user mfe.
+Nov  2 15:05:01 MX3750006dc0458 CRON[2631]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 15:15:01 MX3750006dc0458 CRON[2978]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 15:17:01 MX3750006dc0458 CRON[3019]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Nov  2 15:25:01 MX3750006dc0458 CRON[3216]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 15:30:01 MX3750006dc0458 CRON[3361]: (root) CMD (/opt/McAfee/agent/scripts/ma checkhealth >/dev/null 2>/dev/null)
+Nov  2 15:30:01 MX3750006dc0458 systemd[1]: Started Session 2272 of user mfe.
+Nov  2 15:31:05 MX3750006dc0458 org.gnome.zeitgeist.SimpleIndexer[11422]: ** (zeitgeist-fts:12128): WARNING **: Unable to get info on application://nautilus-autostart.desktop
+Nov  2 15:31:06 MX3750006dc0458 gnome-session[11595]: Created new window in existing browser session.
+Nov  2 15:35:01 MX3750006dc0458 CRON[3627]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 15:42:29 MX3750006dc0458 org.gnome.zeitgeist.SimpleIndexer[11422]: ** (zeitgeist-fts:12128): WARNING **: Unable to get info on application:///home/u66454018/Desktop/chrome-obojjcabkhgeeehnljcaanaiehnplbae-Default.desktop
+Nov  2 15:43:28 MX3750006dc0458 org.gnome.evolution.dataserver.Calendar7[11422]: libecal-Message: e_cal_recur_generate_instances_of_rule(): bogus component, does not have DTSTART.  Skipping...
+Nov  2 15:43:29 MX3750006dc0458 org.gnome.evolution.dataserver.Calendar7[11422]: message repeated 2 times: [ libecal-Message: e_cal_recur_generate_instances_of_rule(): bogus component, does not have DTSTART.  Skipping...]
+Nov  2 15:44:25 MX3750006dc0458 gnome-session[11595]: Gtk-Message: GtkDialog mapped without a transient parent. This is discouraged.
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [15:46:20:464] [11768:12870] [INFO][com.freerdp.client.common.cmdline] - loading channelEx rdpdr
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [15:46:20:464] [11768:12870] [INFO][com.freerdp.client.common.cmdline] - loading channelEx rdpsnd
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [15:46:20:464] [11768:12870] [INFO][com.freerdp.client.common.cmdline] - loading channelEx cliprdr
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [15:46:20:464] [11768:12870] [INFO][com.freerdp.client.common.cmdline] - loading channelEx drdynvc
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [15:46:21:267] [11768:12870] [INFO][com.freerdp.gdi] - Local framebuffer format  PIXEL_FORMAT_BGRA32
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [15:46:21:267] [11768:12870] [INFO][com.freerdp.gdi] - Remote framebuffer format PIXEL_FORMAT_RGB15
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [15:46:21:268] [11768:12876] [INFO][com.freerdp.channels.rdpdr.client] - Loading device service drive [Documents] (static)
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [15:46:21:268] [11768:12870] [INFO][com.freerdp.channels.drdynvc.client] - Loading Dynamic Virtual Channel disp
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [15:46:26:989] [11768:12876] [INFO][com.freerdp.channels.rdpdr.client] - registered device #1: Documents (type=8 id=1)
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [09:30:30:685] [11768:24471] [INFO][com.freerdp.client.common.cmdline] - loading channelEx rdpdr
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [09:30:30:685] [11768:24471] [INFO][com.freerdp.client.common.cmdline] - loading channelEx rdpsnd
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [09:30:30:685] [11768:24471] [INFO][com.freerdp.client.common.cmdline] - loading channelEx cliprdr
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [09:30:30:685] [11768:24471] [INFO][com.freerdp.client.common.cmdline] - loading channelEx drdynvc
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [09:30:37:341] [11768:24471] [INFO][com.freerdp.gdi] - Local framebuffer format  PIXEL_FORMAT_BGRA32
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [09:30:37:341] [11768:24471] [INFO][com.freerdp.gdi] - Remote framebuffer format PIXEL_FORMAT_RGB15
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [09:30:37:341] [11768:24482] [INFO][com.freerdp.channels.rdpdr.client] - Loading device service drive [Documents] (static)
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [09:30:37:357] [11768:24471] [INFO][com.freerdp.channels.drdynvc.client] - Loading Dynamic Virtual Channel disp
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [09:31:05:028] [11768:12870] [INFO][com.freerdp.core] - ERRINFO_DISCONNECTED_BY_OTHER_CONNECTION (0x00000005):Another user connected to the server, forcing the disconnection of the current connection.
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [09:31:09:584] [11768:24482] [INFO][com.freerdp.channels.rdpdr.client] - registered device #1: Documents (type=8 id=1)
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [10:34:10:557] [11768:24471] [INFO][com.freerdp.core] - ERRINFO_LOGOFF_BY_USER (0x0000000C):The disconnection was initiated by the user logging off his or her session on the server.
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [10:37:19:791] [11768:26103] [INFO][com.freerdp.client.common.cmdline] - loading channelEx rdpdr
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [10:37:19:791] [11768:26103] [INFO][com.freerdp.client.common.cmdline] - loading channelEx rdpsnd
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [10:37:19:791] [11768:26103] [INFO][com.freerdp.client.common.cmdline] - loading channelEx cliprdr
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [10:37:19:791] [11768:26103] [INFO][com.freerdp.client.common.cmdline] - loading channelEx drdynvc
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [10:37:21:605] [11768:26103] [INFO][com.freerdp.gdi] - Local framebuffer format  PIXEL_FORMAT_BGRA32
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [10:37:21:605] [11768:26103] [INFO][com.freerdp.gdi] - Remote framebuffer format PIXEL_FORMAT_RGB15
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [10:37:21:606] [11768:26109] [INFO][com.freerdp.channels.rdpdr.client] - Loading device service drive [Documents] (static)
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [10:37:21:606] [11768:26103] [INFO][com.freerdp.channels.drdynvc.client] - Loading Dynamic Virtual Channel disp
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [10:39:11:434] [11768:26109] [INFO][com.freerdp.channels.rdpdr.client] - registered device #1: Documents (type=8 id=1)
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [15:44:25:054] [11768:3995] [INFO][com.freerdp.client.common.cmdline] - loading channelEx rdpdr
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [15:44:25:054] [11768:3995] [INFO][com.freerdp.client.common.cmdline] - loading channelEx rdpsnd
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [15:44:25:054] [11768:3995] [INFO][com.freerdp.client.common.cmdline] - loading channelEx cliprdr
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [15:44:25:054] [11768:3995] [INFO][com.freerdp.client.common.cmdline] - loading channelEx drdynvc
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [15:44:25:424] [11768:3995] [INFO][com.freerdp.gdi] - Local framebuffer format  PIXEL_FORMAT_BGRA32
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [15:44:25:424] [11768:3995] [INFO][com.freerdp.gdi] - Remote framebuffer format PIXEL_FORMAT_RGB15
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [15:44:25:424] [11768:4000] [INFO][com.freerdp.channels.rdpdr.client] - Loading device service drive [Documents] (static)
+Nov  2 15:44:30 MX3750006dc0458 gnome-session[11595]: [15:44:25:424] [11768:3995] [INFO][com.freerdp.channels.drdynvc.client] - Loading Dynamic Virtual Channel disp
+Nov  2 15:45:01 MX3750006dc0458 CRON[4023]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 15:53:58 MX3750006dc0458 org.gnome.evolution.dataserver.Calendar7[11422]: libecal-Message: e_cal_recur_generate_instances_of_rule(): bogus component, does not have DTSTART.  Skipping...
+Nov  2 15:53:58 MX3750006dc0458 org.gnome.evolution.dataserver.Calendar7[11422]: libecal-Message: e_cal_recur_generate_instances_of_rule(): bogus component, does not have DTSTART.  Skipping...
+Nov  2 15:55:01 MX3750006dc0458 CRON[4442]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 16:00:01 MX3750006dc0458 CRON[4618]: (root) CMD (/opt/McAfee/agent/scripts/ma checkhealth >/dev/null 2>/dev/null)
+Nov  2 16:00:01 MX3750006dc0458 systemd[1]: Started Session 2276 of user mfe.
+Nov  2 16:00:14 MX3750006dc0458 gnome-session[11595]: [15:44:30:304] [11768:4000] [INFO][com.freerdp.c
+Nov  2 16:00:14 MX3750006dc0458 gnome-session[11595]: (gnome-software:11769): As-WARNING **: failed to rescan: Failed to parse /usr/share/applications/stopwatch.desktop.dpkg-new file: cannot process file of type text/plain
+Nov  2 16:00:14 MX3750006dc0458 gnome-session[11595]: (gnome-software:11769): As-WARNING **: failed to rescan: Failed to parse /usr/share/applications/stopwatch.desktop file: cannot process file of type application/x-desktop
+Nov  2 16:00:18 MX3750006dc0458 gnome-session[11595]: (gnome-software:11769): As-WARNING **: failed to rescan: Failed to parse /usr/share/applications/bamf-2.index file: cannot process file of type text/plain
+Nov  2 16:05:01 MX3750006dc0458 CRON[5314]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 16:11:10 MX3750006dc0458 snapd[1089]: 2017/11/02 16:11:10.857186 snapmgr.go:429: No snaps to auto-refresh found
+Nov  2 16:15:01 MX3750006dc0458 CRON[5702]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 16:17:01 MX3750006dc0458 CRON[5802]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Nov  2 16:25:01 MX3750006dc0458 CRON[6118]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 16:30:02 MX3750006dc0458 CRON[6242]: (root) CMD (/opt/McAfee/agent/scripts/ma checkhealth >/dev/null 2>/dev/null)
+Nov  2 16:30:02 MX3750006dc0458 systemd[1]: Started Session 2281 of user mfe.
+Nov  2 16:35:01 MX3750006dc0458 CRON[6378]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 16:43:07 MX3750006dc0458 org.gnome.evolution.dataserver.Sources5[11422]: ** (evolution-source-registry:11650): WARNING **: secret_service_search_sync: must specify at least one attribute to match
+Nov  2 16:43:24 MX3750006dc0458 org.gnome.evolution.dataserver.Calendar7[11422]: libecal-Message: e_cal_recur_generate_instances_of_rule(): bogus component, does not have DTSTART.  Skipping...
+Nov  2 16:43:25 MX3750006dc0458 org.gnome.evolution.dataserver.Calendar7[11422]: message repeated 2 times: [ libecal-Message: e_cal_recur_generate_instances_of_rule(): bogus component, does not have DTSTART.  Skipping...]
+Nov  2 16:45:01 MX3750006dc0458 CRON[6773]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 16:55:01 MX3750006dc0458 CRON[7070]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 17:00:01 MX3750006dc0458 CRON[7197]: (root) CMD (/opt/McAfee/agent/scripts/ma checkhealth >/dev/null 2>/dev/null)
+Nov  2 17:00:01 MX3750006dc0458 systemd[1]: Started Session 2285 of user mfe.
+Nov  2 17:05:01 MX3750006dc0458 CRON[7334]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 17:15:01 MX3750006dc0458 CRON[7696]: (root) CMD (   test -x /etc/cron.daily/popularity-contest && /etc/cron.daily/popularity-contest --crond)
+Nov  2 17:15:01 MX3750006dc0458 CRON[7697]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 17:15:50 MX3750006dc0458 systemd[1]: Starting Automatically fetch and run repair assertions...
+Nov  2 17:15:50 MX3750006dc0458 snap-repair[7758]: error: cannot use snap-repair on a classic system
+Nov  2 17:15:50 MX3750006dc0458 systemd[1]: Started Automatically fetch and run repair assertions.
+Nov  2 17:17:01 MX3750006dc0458 CRON[7817]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Nov  2 17:25:01 MX3750006dc0458 CRON[8133]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 17:30:01 MX3750006dc0458 CRON[8317]: (root) CMD (/opt/McAfee/agent/scripts/ma checkhealth >/dev/null 2>/dev/null)
+Nov  2 17:30:01 MX3750006dc0458 systemd[1]: Started Session 2291 of user mfe.
+Nov  2 17:35:01 MX3750006dc0458 CRON[8499]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 17:45:01 MX3750006dc0458 CRON[8988]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 17:55:01 MX3750006dc0458 CRON[9423]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 18:00:00 MX3750006dc0458 ocserv[1589]: main: refreshed cookie key
+Nov  2 18:00:01 MX3750006dc0458 CRON[9571]: (root) CMD (/opt/McAfee/agent/scripts/ma checkhealth >/dev/null 2>/dev/null)
+Nov  2 18:00:01 MX3750006dc0458 systemd[1]: Started Session 2295 of user mfe.
+Nov  2 18:05:01 MX3750006dc0458 CRON[9865]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 18:15:01 MX3750006dc0458 CRON[10267]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 18:17:01 MX3750006dc0458 CRON[10342]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Nov  2 18:25:01 MX3750006dc0458 CRON[10617]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 18:29:54 MX3750006dc0458 org.gnome.zeitgeist.SimpleIndexer[11422]: ** (zeitgeist-fts:12128): WARNING **: Unable to get info on application://nautilus-autostart.desktop
+Nov  2 18:29:54 MX3750006dc0458 gnome-session[11595]: Created new window in existing browser session.
+Nov  2 18:30:01 MX3750006dc0458 CRON[10913]: (root) CMD (/opt/McAfee/agent/scripts/ma checkhealth >/dev/null 2>/dev/null)
+Nov  2 18:30:01 MX3750006dc0458 systemd[1]: Started Session 2300 of user mfe.
+Nov  2 18:35:01 MX3750006dc0458 CRON[11166]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Nov  2 18:45:01 MX3750006dc0458 CRON[12018]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
