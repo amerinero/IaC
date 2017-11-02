@@ -8,8 +8,11 @@ print (hello, "->", greet.parseString(hello))
 month = Word(alphas, exact=3)
 ints = Word(nums)
 day = ints
-hour  = Combine(ints + ":" + ints + ":" + ints)
-timestamp = month + day + hour
+Horas = ints
+Mins = ints
+Segs = ints
+hour  = Combine(Horas + ":" + Mins + ":" + Segs)
+timestamp = month + day + Horas + Suppress(":") + Mins + Suppress(":") + Segs
 hostname = Word(alphas + nums + "_" + "-" + ".")
 appname = Word(alphas + "/" + "-" + "_" + ".") + Optional(Suppress("[") + ints + Suppress("]")) + Suppress(":")
 message = Regex(".*")
