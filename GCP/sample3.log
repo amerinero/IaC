@@ -1,0 +1,100 @@
+Oct 30 00:26:01 pregest02 kernel: bce0:
+Oct 30 00:26:01 pregest02 kernel: discard frame w/o leading ethernet header (len 0 pkt len 0)
+Oct 30 00:26:01 pregest02 kernel: bce0: discard frame w/o leading ethernet header (len 0 pkt len 0)
+Oct 30 00:26:32 pregest02 last message repeated 195 times
+Oct 30 00:28:33 pregest02 last message repeated 666 times
+Oct 30 00:38:33 pregest02 last message repeated 3074 times
+Oct 30 00:48:34 pregest02 last message repeated 3372 times
+Oct 30 00:58:34 pregest02 last message repeated 3360 times
+Oct 30 01:08:35 pregest02 last message repeated 4072 times
+Oct 30 01:10:49 pregest02 last message repeated 645 times
+Oct 30 01:10:49 pregest02 kernel: bce0:
+Oct 30 01:10:49 pregest02 kernel: discard frame w/o leading ethernet header (len 0 pkt len 0)
+Oct 30 01:10:49 pregest02 kernel: bce0: discard frame w/o leading ethernet header (len 0 pkt len 0)
+Oct 30 01:11:20 pregest02 last message repeated 193 times
+Oct 30 01:13:21 pregest02 last message repeated 782 times
+Oct 30 01:23:22 pregest02 last message repeated 3482 times
+Oct 30 01:33:24 pregest02 last message repeated 3397 times
+Oct 30 01:40:55 pregest02 last message repeated 2486 times
+Oct 30 01:40:55 pregest02 kernel: bce0:
+Oct 30 01:40:55 pregest02 kernel: discard frame w/o leading ethernet header (len 0 pkt len 0)
+Oct 30 01:40:55 pregest02 kernel: bce0: discard frame w/o leading ethernet header (len 0 pkt len 0)
+Oct 30 01:41:26 pregest02 last message repeated 171 times
+Oct 30 01:43:27 pregest02 last message repeated 705 times
+Oct 30 01:53:28 pregest02 last message repeated 3413 times
+Oct 30 02:03:29 pregest02 last message repeated 3501 times
+Oct 30 02:13:30 pregest02 last message repeated 3220 times
+Oct 30 02:23:31 pregest02 last message repeated 3425 times
+Oct 30 02:26:26 pregest02 last message repeated 954 times
+Oct 30 02:26:26 pregest02 kernel: bce0:
+Oct 30 02:26:26 pregest02 kernel: discard frame w/o leading ethernet header (len 0 pkt len 0)
+Oct 30 02:26:26 pregest02 kernel: bce0: discard frame w/o leading ethernet header (len 0 pkt len 0)
+Oct 30 02:26:57 pregest02 last message repeated 171 times
+Oct 30 02:28:58 pregest02 last message repeated 604 times
+Oct 30 02:37:35 pregest02 last message repeated 2829 times
+Oct 30 02:37:35 pregest02 kernel: bce0:
+Oct 30 02:37:35 pregest02 kernel: discard frame w/o leading ethernet header (len 0 pkt len 0)
+Oct 30 02:37:35 pregest02 kernel: bce0: discard frame w/o leading ethernet header (len 0 pkt len 0)
+Oct 30 02:38:06 pregest02 last message repeated 191 times
+Oct 30 02:40:07 pregest02 last message repeated 640 times
+Oct 30 02:50:08 pregest02 last message repeated 3417 times
+Oct 30 03:00:09 pregest02 last message repeated 3404 times
+Oct 30 03:01:01 pregest02 last message repeated 280 times
+Oct 30 03:01:01 pregest02 sendmail[44833]: My unqualified host name (pregest02) unknown; sleeping for retry
+Oct 30 03:01:01 pregest02 kernel: bce0: discard frame w/o leading ethernet header (len 0 pkt len 0)
+Oct 30 03:01:32 pregest02 last message repeated 205 times
+Oct 30 03:02:01 pregest02 last message repeated 169 times
+Oct 30 03:02:01 pregest02 sendmail[44833]: unable to qualify my own domain name (pregest02) -- using short name
+Oct 30 03:02:01 pregest02 kernel: bce0: discard frame w/o leading ethernet header (len 0 pkt len 0)
+Oct 30 03:02:01 pregest02 last message repeated 3 times
+Oct 30 03:02:01 pregest02 sendmail[44895]: My unqualified host name (pregest02) unknown; sleeping for retry
+Oct 30 03:02:01 pregest02 kernel: bce0: discard frame w/o leading ethernet header (len 0 pkt len 0)
+Oct 30 03:02:32 pregest02 last message repeated 167 times
+Oct 30 03:03:01 pregest02 last message repeated 209 times
+Oct 30 03:03:02 pregest02 sendmail[44895]: unable to qualify my own domain name (pregest02) -- using short name
+Oct 30 03:03:02 pregest02 sendmail[44900]: My unqualified host name (pregest02) unknown; sleeping for retry
+Oct 30 03:03:02 pregest02 kernel: bce0: discard frame w/o leading ethernet header (len 0 pkt len 0)
+Oct 30 03:03:33 pregest02 last message repeated 167 times
+Oct 30 03:04:01 pregest02 last message repeated 117 times
+Oct 30 03:04:02 pregest02 sendmail[44900]: unable to qualify my own domain name (pregest02) -- using short name
+Oct 30 03:04:02 pregest02 kernel: bce0: discard frame w/o leading ethernet header (len 0 pkt len 0)
+Oct 30 03:04:33 pregest02 last message repeated 167 times
+Oct 30 03:06:34 pregest02 last message repeated 671 times
+Oct 30 03:07:54 pregest02 last message repeated 417 times
+Oct 30 03:07:54 pregest02 sendmail[45072]: My unqualified host name (pregest02) unknown; sleeping for retry
+Oct 30 03:07:54 pregest02 sendmail[45071]: My unqualified host name (pregest02) unknown; sleeping for retry
+Oct 30 03:07:54 pregest02 kernel: bce0: discard frame w/o leading ethernet header (len 0 pkt len 0)
+Oct 30 03:08:25 pregest02 last message repeated 169 times
+Oct 30 03:08:54 pregest02 last message repeated 157 times
+Oct 30 03:08:54 pregest02 sendmail[45071]: unable to qualify my own domain name (pregest02) -- using short name
+Oct 30 03:08:54 pregest02 sendmail[45072]: unable to qualify my own domain name (pregest02) -- using short name
+Oct 30 03:08:54 pregest02 kernel: bce0: discard frame w/o leading ethernet header (len 0 pkt len 0)
+Oct 30 03:09:25 pregest02 last message repeated 143 times
+Oct 30 03:11:26 pregest02 last message repeated 671 times
+Oct 30 03:18:07 pregest02 last message repeated 2457 times
+Oct 30 03:18:07 pregest02 kernel: bce0:
+Oct 30 03:18:07 pregest02 kernel: discard frame w/o leading ethernet header (len 0 pkt len 0)
+Oct 30 03:18:07 pregest02 kernel: bce0: discard frame w/o leading ethernet header (len 0 pkt len 0)
+Oct 30 03:18:38 pregest02 last message repeated 163 times
+Oct 30 03:20:39 pregest02 last message repeated 633 times
+Oct 30 03:30:40 pregest02 last message repeated 3351 times
+Oct 30 03:40:41 pregest02 last message repeated 3380 times
+Oct 30 03:50:41 pregest02 last message repeated 3413 times
+Oct 30 04:00:00 pregest02 last message repeated 3070 times
+Oct 30 04:00:00 pregest02 kernel: bce0: discard frame w/o leading ethernet header (len 0 pkt len 0)
+Oct 30 04:00:31 pregest02 last message repeated 214 times
+Oct 30 04:02:32 pregest02 last message repeated 656 times
+Oct 30 04:12:33 pregest02 last message repeated 3276 times
+Oct 30 04:14:08 pregest02 last message repeated 553 times
+Oct 30 04:14:08 pregest02 kernel: bce0:
+Oct 30 04:14:08 pregest02 kernel: discard frame w/o leading ethernet header (len 0 pkt len 0)
+Oct 30 04:14:08 pregest02 kernel: bce0: discard frame w/o leading ethernet header (len 0 pkt len 0)
+Oct 30 04:14:39 pregest02 last message repeated 132 times
+Oct 30 04:16:40 pregest02 last message repeated 763 times
+Oct 30 04:19:46 pregest02 last message repeated 988 times
+Oct 30 04:19:46 pregest02 kernel: bce0:
+Oct 30 04:19:46 pregest02 kernel: discard frame w/o leading ethernet header (len 0 pkt len 0)
+Oct 30 04:19:46 pregest02 kernel: bce0: discard frame w/o leading ethernet header (len 0 pkt len 0)
+Oct 30 04:20:17 pregest02 last message repeated 169 times
+Oct 30 04:22:18 pregest02 last message repeated 706 times
+Oct 30 04:29:20 pregest02 last message repeated 2280 times

@@ -2,63 +2,113 @@ from pyparsing import Word, alphas, alphanums, nums, Combine, Optional, Suppress
 from google.cloud import datastore
 import datetime
 import pytz
+import argparse
 
-def log2cloud (client,type,line):
+def log2cloud (client,type,logfile):
 
-    # Primero parseamos la linea y la troceamos
+    # Primero parseamos la linea y la troceamos ....
 
-    #logline = MES DD HH:MM:SS HOSTNAME PROC[PID]: MESSAGE
+    # logline = MES DD HH:MM:SS HOSTNAME PROC[PID]: MESSAGE
+
     month = Word(alphas, exact=3)
     ints = Word(nums)
     day = ints
-    Horas = ints
-    Mins = ints
-    Segs = ints
-    #timestamp = month + day + Horas + Suppress(":") + Mins + Suppress(":") + Segs
     hour  = Combine(ints + ":" + ints + ":" + ints)
+
+    # Definimos las 4 partes de la linea de log (Ubuntu)
     timestamp = month + day + hour
     hostname = Word(alphas + nums + "_" + "-" + ".")
     appname = Word(alphas + nums + "/" + "-" + "_" + ".") + Optional(Suppress("[") + ints + Suppress("]")) + Suppress(":")
     message = Regex(".*")
-    logline = timestamp + hostname + appname + message
-    mess_prueba = "Oct 28 08:30:01 MX3750006dc0458 systemd[1]: Started Session 653 of user mfe."
+
+    # Componemos la plantilla con la que se hara el parseo
+    logline = timestamp + hostname + Optional(appname) + message
+
+    # La fecha en los logs de linux (Ubuntu) viene asi
     datefmt = '%Y %b %d %H:%M:%S'
-    Year=2017
+
+    # Necesitamos saber en que anio estamos porque no viene en el fichero
+    Year = datetime.date.today().year
+
+    # Tambien tenemos que poner la zona horaria. No vale con anadir CET y ya
+    # Usaremos esto luego con la hora que saquemos de la linea
     timezone=pytz.timezone("CET")
-    campos = logline.parseString(line)
-    # for i in range(len(campos)):
-    #     print ("Campo[",i,"]=",campos[i])
 
-    fechastr="%d %s %02d %s" % (Year,campos[0],int(campos[1]),campos[2])
-    # print (fechastr)
-    fecha = datetime.datetime.strptime(fechastr,datefmt)
-    #fecha.tzinfo=CET
-    # print (fecha)
-    fechatz = timezone.localize(fecha)
-    # print (fechatz)
-    # Despues lo inseretamos en la bbdd de la nube
+    # A partir de aqui viene lo que tenemos que repetir por cada linea del fichero
+    linecounter = 0
+    with open(logfile) as syslogFile:
+      for line in syslogFile:
+          linecounter += 1
+          print line
+          # Realizamos el parseo de la linea de log para sacar todos los campos separaditos
+          campos = logline.parseString(line)
 
-    key = client.key(type)
-    logline_db = datastore.Entity(
-         key, exclude_from_indexes=['Mensaje'])
+           # DEBUG
+        #   for i in range(len(campos)):
+        #     print ("Campo[",i,"]=",campos[i])
 
-    logline_db.update({
-         'Fecha': fechatz,
-         'Hostname': unicode(campos[3]),
-         'Proceso': unicode(campos[4]),
-         'PID': int(campos[5]),
-         'Mensaje': unicode(campos[6])
-     })
-    client.put(logline_db)
-    return logline_db.key
+          # Componemos una cadena con el timestamp sacado de la linea de log
+          fechastr="%d %s %02d %s" % (Year,campos[0],int(campos[1]),campos[2])
+
+          # A partir de la cadena antiior creamos un objeto datetime
+          fecha = datetime.datetime.strptime(fechastr,datefmt)
+
+          # Anadimos la zona horaria al objeto datetime creado anteriormente
+          fechatz = timezone.localize(fecha)
+
+          # Despues lo inseretamos en la bbdd de la nube
+
+          key = client.key(type)
+          logline_db = datastore.Entity(
+          key, exclude_from_indexes=['Mensaje'])
+
+        #   print ("Numero de campos:",len(campos))
+
+          if (len(campos)<5):
+              print ("Linea no procesable")
+              print (line)
+          elif (len(campos)==5):
+              proceso = unicode('-Empty-')
+              pid = 0
+              Mensaje = unicode(campos[4])
+          elif (len(campos)==6):
+              proceso = unicode(campos[4])
+              pid = 0
+              Mensaje = unicode(campos[5])
+          else:
+              proceso = unicode(campos[4])
+              pid = int(campos[5])
+              Mensaje = unicode(campos[6])
 
 
-#print (mess_prueba, "->", campos)
-#for i in range(len(campos)):
-#    print ("Campo[",i,"]=",campos[i])
-Linea ="Oct 30 08:30:01 MX3750006dc0458 systemd[1]: Started Session 653 of user mfe."
-client = datastore.Client('unix-logsgraphs')
-with open('./hoy.log') as syslogFile:
-  for line in syslogFile:
-      print line
-      log2cloud (client,'LogMensaje',line)
+
+          logline_db.update({
+              'Fecha': fechatz,
+              'Hostname': unicode(campos[3]),
+              'Proceso': proceso,
+              'PID': pid,
+              'Mensaje': Mensaje
+           })
+          client.put(logline_db)
+
+    print ("Total lineas procesadas: ",linecounter)
+    return linecounter
+
+
+# Python main
+
+cmdparser = argparse.ArgumentParser()
+cmdparser.add_argument("Project", help="The GCP Project where the datastore is created")
+cmdparser.add_argument("Type", help="The datastore type")
+cmdparser.add_argument("Logfile", help="The logfile to be stored in cloud datastore")
+args = cmdparser.parse_args()
+
+print args
+
+client = datastore.Client(args.Project)
+log2cloud(client,args.Type,args.Logfile)
+
+# with open('./pre2gst.log') as syslogFile:
+#   for line in syslogFile:
+#       print line
+#       log2cloud (client,'LogMensaje',line)
