@@ -1,0 +1,25 @@
+Para Ubuntu
+
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/microsoft.list
+
+sudo apt-get update
+sudo apt-get install -y powershell
+
+sudo pwsh
+
+  Install-Module AzureRM.NetCore
+  Import AzureRM.Netcore
+  Import-Module AzureRM.Netcore
+  Import-Module AzureRM.Profile.Netcore
+  Login-AzureRmAccount
+
+  PS /home/u66454018> Login-AzureRmAccount
+  WARNING: To sign in, use a web browser to open the page https://aka.ms/devicelogin and enter the code CEXX36DUT to authenticate.
+
+
+  Account          : ctrespeo@gmail.com
+  SubscriptionName : Evaluación gratuita
+  SubscriptionId   : c5ea1dbe-da06-452f-87e7-7566b7cd953b
+  TenantId         : fbb3dbe9-7fd4-4789-86e8-6fa8c5ef3775
+  Environment      : AzureCloud  

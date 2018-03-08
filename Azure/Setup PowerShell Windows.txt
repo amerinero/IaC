@@ -1,0 +1,18 @@
+Inializar PowerShell para Azure
+
+PS C:\Windows\system32> Install-Module AzureRM
+
+PS C:\Windows\system32> Install-Module Azure -AllowClobber
+
+PS C:\Windows\system32> Set-ExecutionPolicy Bypass -scope LocalMachine
+
+PS C:\Windows\system32> Import-Module Azure
+
+PS C:\Windows\system32> Login-AzAccount
+
+
+Account          : ctrespeo@gmail.com
+SubscriptionName : Evaluación gratuita
+SubscriptionId   : c5ea1dbe-da06-452f-87e7-7566b7cd953b
+TenantId         : fbb3dbe9-7fd4-4789-86e8-6fa8c5ef3775
+Environment      : AzureCloud
