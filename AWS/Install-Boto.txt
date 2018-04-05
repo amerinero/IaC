@@ -1,0 +1,5 @@
+Install-Boto.txt
+
+pip3 install boto3
+
+https://boto3.readthedocs.io/en/latest/guide/quickstart.html
