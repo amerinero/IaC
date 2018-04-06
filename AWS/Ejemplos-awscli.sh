@@ -54,36 +54,51 @@ $> aws ec2 associate-route-table  \
 	--route-table-id rtb-2843ea51
 
 # Crear Security-Group
-aws ec2 create-security-group \
+$> aws ec2 create-security-group \
 	--group-name cli-sg \
 	--vpc-id vpc-a2cd5dc4 \
 	--description "security group from CLI"
 
 # Crear Reglas dentro de un Security Group
-aws ec2 authorize-security-group-ingress \
+$> aws ec2 authorize-security-group-ingress \
 	--group-name cli-sg \
 	--protocol tcp --port 22 --cidr 0.0.0.0/0
 
 # Listar "key pairs"
 $> aws ec2 describe-key-pairs --output text
 
-# Crear instancia privada (sin IP Publica)
-aws ec2 run-instances --image-id ami-3bfab942 \
+# Crear instancia (VM) privada (sin IP Publica)
+# Amazon Linux --> ami-3bfab942 (ver en consola web)
+# o con aws ec2 describe-images (ojo, volcar a un fichero)
+$> aws ec2 run-instances --image-id ami-3bfab942 \
 	--subnet-id subnet-5456ff1c \
 	--security-group-ids sg-c34942b9 \
 	--count 1 --instance-type t2.micro \
 	--key-name Merinero 
 
-# Crear instancia publica (con IP Publica)
-aws ec2 run-instances --image-id ami-3bfab942 \
+# Crear instancia (VM) publica (con IP Publica)
+$> aws ec2 run-instances --image-id ami-3bfab942 \
 	--subnet-id subnet-5456ff1c \
 	--security-group-ids sg-c34942b9 \
 	--count 1 --instance-type t2.micro \
 	--associate-public-ip-address \
 	--key-name Merinero 
 
+# Eliminar instancia (VM)
+$> aws ec2 terminate-instances --instance-ids i-09313e97eae760baf 
 
+# Eliminar Security Group
+$> aws ec2 delete-security-group --group-id sg-c34942b9
 
+# Eliminar subnet
+$> aws ec2 delete-subnet --subnet-id  subnet-7d258c35
 
+# Eliminar tabla de rutas
+$> aws ec2 delete-route-table --route-table-id rtb-ee6ac397
+$> aws ec2 delete-route-table --route-table-id rtb-2843ea51
 
+# Eliminar VPC
+$> aws ec2 delete-vpc --vpc-id vpc-a2cd5dc4
 
+# Eliminar Internet Gateway
+$> aws ec2 delete-internet-gateway --internet-gateway-id igw-ecd8b68b
