@@ -1,0 +1,28 @@
+How To Add Machines
+In order to add a machine to this Console, install the CloudEndure Agent on the machine (data replication begins automatically upon Agent installation).
+
+
+Your Agent installation token:
+
+D077-137E-33BB-944E-39DB-A66F-AE0F-135C-C632-3C61-F9C6-A052-4A41-3A74-9474-5AFB
+To generate a replacement token, go to Setup & Info > Other Settings
+
+
+For Linux machines
+
+Download the Installer:
+
+wget -O ./installer_linux.py https://gcp.cloudendure.com/installer_linux.py
+Then run the Installer and follow the instructions:
+
+sudo python ./installer_linux.py -t D077-137E-33BB-944E-39DB-A66F-AE0F-135C-C632-3C61-F9C6-A052-4A41-3A74-9474-5AFB --no-prompt
+
+For Windows machines
+
+Download the Windows installer, then launch as follows:
+
+installer_win.exe -t D077-137E-33BB-944E-39DB-A66F-AE0F-135C-C632-3C61-F9C6-A052-4A41-3A74-9474-5AFB --no-prompt
+
+Additional help and information
+
+Click the help icon (?) at any time to access more detailed Installation Guides (including machine, OS and firewall requirements) as well as our Workload Mobility best practices and guidelines.
