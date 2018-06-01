@@ -1,0 +1,55 @@
+Apuntes Loadbalancing para Voicemod
+
+0.- Crear IAM Role que contenga estas 2 policies:
+   + AmazonS3FullAccess
+   + CloudWatchLogsFullAccess
+
+1.- Para PHP en Amazon Linux --> yum install httpd24 php70
+
+2.- Para generar stress y probar el auto-scale --> yum install strees
+
+3.- Para centralizar los logs con CloudWatch --> yum install awslogs
+  + https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/QuickStartEC2Instance.html
+  + 
+  + Añadir en /etc/awslogs/awslogs.conf
+
+  [/var/log/messages]
+datetime_format = %b %d %H:%M:%S
+file = /var/log/messages
+buffer_duration = 5000
+log_stream_name = {instance_id}-messages
+initial_position = start_of_file
+log_group_name = AutoScale-Frontal
+
+[httpd-access_log]
+datetime_format = %Y-%m-%d %H:%M:%S
+file = /var/log/httpd/access_log
+buffer_duration = 5000
+log_stream_name = httpd-access_log
+initial_position = start_of_file
+log_group_name = AutoScale-Frontal
+
+[httpd-error_log]
+datetime_format = %Y-%m-%d %H:%M:%S
+file = /var/log/httpd/error_log
+buffer_duration = 5000
+log_stream_name = httpd-error_log
+initial_position = start_of_file
+log_group_name = AutoScale-Frontal
+
+4.- Modificar el LogFormat de httpd para añadir el campo X-Forwarded-For para que en los logs aparezca la ip original del peticionario y no la del balanceador. (http://www.loadbalancer.org/blog/apache-and-x-forwarded-for-headers/)
+
+5.- Con la máquina preparada --> Crear imagen AMI
+6.- Con imagen AMI --> Crear Launch Configuration
+7.- Crear Target Group
+8.- Con Launch Configuration + Target Group --> Crear Auto-Scaling group
+9.- Crear LoadBalancer asociado a Target Group
+
+Para subir una nueva release ... 
+  1.- Seguir pasos para crear nueva máquina
+  2.- Editar / quitar / poner lo que se quiera cambiar
+  3.- Generar nueva AMI
+  4.- Crear nueva Launch Config. para que apunte a nueva AMI
+  5.- Modicar Auto Scaling Group para usar nueva Launch Config.
+  6.- Terminate sobre las instacias que haya en funcioanamiento, las nuevas se levantaran con la nueva versión.
+
