@@ -53,3 +53,7 @@ Para subir una nueva release ...
   5.- Modicar Auto Scaling Group para usar nueva Launch Config.
   6.- Terminate sobre las instacias que haya en funcioanamiento, las nuevas se levantaran con la nueva versión.
 
+
+# Para loadbalancer sobre instancias privadas
+  https://aws.amazon.com/es/premiumsupport/knowledge-center/public-load-balancer-private-ec2/
+
