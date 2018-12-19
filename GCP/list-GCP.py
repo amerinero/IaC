@@ -11,7 +11,7 @@ import time
 from google.oauth2 import service_account
 import googleapiclient.discovery
 
-SERVICE_ACCOUNT_FILE = 'curso-easynube-b81dac2a14c7.json'
+SERVICE_ACCOUNT_FILE = 'curso-easynube-inventory-35b77301e9ed.json'
 
 
 # from oauth2client.client import GoogleCredentials
@@ -54,6 +54,7 @@ def show_dict (dic: dict, level=0):
 # credentials = GoogleCredentials.get_application_default()
 
 project = 'curso-easynube'
+#project = '675198306410'
 
 credentials = service_account.Credentials.from_service_account_file(
         SERVICE_ACCOUNT_FILE)
@@ -66,6 +67,13 @@ compute = googleapiclient.discovery.build('compute', 'v1', \
 zonas = get_zone_list (compute,project)
 
 print (zonas)
+
+crm = googleapiclient.discovery.build('cloudresourcemanager', 'v1', \
+	credentials=credentials)
+
+projects = crm.projects().list().execute()
+
+print (projects)
 
 
 

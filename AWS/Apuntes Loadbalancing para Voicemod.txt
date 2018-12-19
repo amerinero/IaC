@@ -4,7 +4,7 @@ Apuntes Loadbalancing para Voicemod
    + AmazonS3FullAccess
    + CloudWatchLogsFullAccess
 
-1.- Para PHP en Amazon Linux --> yum install httpd24 php70
+1.- Para PHP en Amazon Linux --> yum install httpd24 php70 
 
 2.- Para generar stress y probar el auto-scale --> yum install strees
 
@@ -56,4 +56,53 @@ Para subir una nueva release ...
 
 # Para loadbalancer sobre instancias privadas
   https://aws.amazon.com/es/premiumsupport/knowledge-center/public-load-balancer-private-ec2/
+
+
+  Modulos PHP
+ * php-mysql (para acceso a MariaDB)
+ * mbstring
+ * dom
+ * gd
+ * mcrypt
+ * posix
+ * soap
+ * sysvmsg
+ * wddx
+ * xmlreader
+ * xmlrpc
+ * xmlwriter
+ * xsl
+
+  * sysvsem
+  * sysvshmS
+
+  yum install php php-mysql php-mbstring php-mcrypt php-gd php-soap php-xml php-xmlrpc php-process mod_ssl
+
+ Para que desde los centos el apaache pueda conectar con la bbdd
+  setsebool -P httpd_can_network_connect_db=1
+
+ Para que el apache pueda escribir
+  chcon -t httpd_sys_rw_content_t /var/www/html -R 
+
+Voicemod account == 7480-2621-4216
+
+Cosas a copiar al iniciar una instancia:
+- /etc/httpd/conf/httpd.conf
+- /etc/httpd/conf.d/*
+- /var/awslogs/awslogs.conf
+
+echo "<?php phpinfo(); ?>" > /var/www/utils.voicemod/phpinfo.php
+echo "<?php phpinfo(); ?>" > /var/www/online-voices/phpinfo.php
+echo "<?php phpinfo(); ?>" > /var/www/public.voicemod/phpinfo.php
+echo "<?php phpinfo(); ?>" > /var/www/public.voicemod/phpinfo.php
+echo "<?php phpinfo(); ?>" > /var/www/2taptap.com/phpinfo.php
+echo "<?php phpinfo(); ?>" > /var/www/2taptap.com/voicemod/phpinfo.php
+echo "<?php phpinfo(); ?>" > /var/www/services/phpinfo.php
+echo "<?php phpinfo(); ?>" > /var/www/services/phpinfo.php
+echo "<?php phpinfo(); ?>" > /var/www/services/phpinfo.php
+echo "<?php phpinfo(); ?>" > /var/www/services/phpinfo.php
+echo "<?php phpinfo(); ?>" > /var/www/services/api.messages/phpinfo.php
+echo "<?php phpinfo(); ?>" > /var/www/kanvas/phpinfo.php
+echo "<?php phpinfo(); ?>" > /var/www/sdk/phpinfo.php
+echo "<?php phpinfo(); ?>" > /var/www/sdkDev/phpinfo.php
 

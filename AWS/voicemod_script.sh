@@ -17,7 +17,7 @@ chkconfig awslogs on
 Sobre CentOS 7
 
 #!/bin/bash
-yum install php stress awscli -y
+yum install php php-mysql php-mbstring php-mcrypt php-gd php-soap php-xml php-xmlrpc php-process wget lsof tcpdump nc awscli MariaDB-client -y
 yum update -y
 mv /etc/localtime /etc/localtime.orig
 ln -s /usr/share/zoneinfo/Europe/Madrid /etc/localtime
