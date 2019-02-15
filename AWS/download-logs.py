@@ -2,7 +2,6 @@ import boto3
 import sys
 import time
 import argparse
-
 #
 # Programilla para descargar los logs de un grupo de CloudWatch Logs.
 #
@@ -109,41 +108,39 @@ for st in lstreams:
 	stname = st.get('logStreamName')	
 	print ("Procesando %s" % (stname), file=sys.stderr)
 
-	setevents = Logs.get_log_events(
-			logGroupName=argumentos.Log_Group_Name,
-			logStreamName=stname,
-			startTime=miliDesde,
-			endTime=miliHasta,
-			startFromHead=True)
-
-	ftoken = setevents.get('nextForwardToken')
-	btoken = setevents.get('nextBackwardToken')
-	eventos = setevents.get('events')
-
-	print ("Numero de mensajes %d" % (len(eventos)), file=sys.stderr)
-
-	# Aqui es donde sacamos por la salida estandard los mensajes de log
-	for ev in eventos:
-		print (ev.get('message'))
-
 	# Bucle para hacer cuantas llamadas sean necesarias con nextToken hasta sacar todos
 	# los mensajes
+	ftoken = ''
+	totaleventos = 0
 	while (ftoken != 'None'):
-		setevents = Logs.get_log_events(
-			logGroupName=argumentos.Log_Group_Name,
-			logStreamName=stname,
-			startTime=miliDesde,
-			endTime=miliHasta,
-			startFromHead=True,
-			nextToken=ftoken)
+		if (ftoken == ''):
+			setevents = Logs.get_log_events(
+				logGroupName=argumentos.Log_Group_Name,
+				logStreamName=stname,
+				startTime=miliDesde,
+				endTime=miliHasta,
+				startFromHead=True)
+		else:
+			setevents = Logs.get_log_events(
+				logGroupName=argumentos.Log_Group_Name,
+				logStreamName=stname,
+				startTime=miliDesde,
+				endTime=miliHasta,
+				startFromHead=True,
+				nextToken=ftoken)
 		eventos = setevents.get('events')
 
-		print ("(in loop) Numero de mensajes %d" %(len(eventos)), file=sys.stderr)
+		totaleventos += len(eventos)
+		#print ("(in loop) Numero de mensajes %d" %(len(eventos)), file=sys.stderr)
 
 		for ev in eventos:
 			print (ev.get('message'))
 		
 		oldtoken = ftoken
 		ftoken = setevents.get('nextForwardToken')
+		print ("oldtoken = ",oldtoken, file=sys.stderr)
+		print ("ftoken = ",ftoken, file=sys.stderr)
 		if ftoken == oldtoken:
+			print ("Número total de eventos en %s -> %d" %(stname,totaleventos), file=sys.stderr)
+			totaleventos = 0
 			ftoken = 'None'

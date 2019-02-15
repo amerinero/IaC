@@ -9,6 +9,12 @@
 # Usa el script python download-logs.py para interactuar con Cloudwatch Logs. Este script necesita 
 # $HOME/.aws/credentials para acceder a los servicios de AWS.
 #
+# En mi portatil tengo que poner esto para que use las credenciales correctas por lo usar el 
+# usuario de la cuenta master para acceder a la delegada.
+
+AWS_PROFILE=koibox
+export AWS_PROFILE
+
 DESDE=`/bin/date --date="-7 days" +%s`
 HASTA=`/bin/date +%s`
 NSEMANA=`/bin/date --date="-7 days" +%V`
