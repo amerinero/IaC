@@ -4,15 +4,15 @@ from datetime import timedelta as td
 import json
 
 # El evento de CloudWatch debe enviar un "Constant (JSON text)" indicando el identificador de rds (dbname) 
-# el minimo de horas que deben tener los snapshots a borrar (retencion).
+# el minimo de dias que deben tener los snapshots a borrar (retencion).
 # Se tiene que poner como  en la parte de Target al definir el evento.
 # 
 # { "dbname":"koiboxpreprod","retencion":8 }
 
 def lambda_handler(event, context):
 	db_identifier = event['dbname']
-	horas = event['retencion']
-	limite = dt.utcnow()-td(hours=horas)
+	dias = event['retencion']
+	limite = dt.utcnow()-td(days=dias)
 	rds = boto3.client('rds')
 	resp = rds.describe_db_snapshots(
 		DBInstanceIdentifier=db_identifier,
@@ -28,5 +28,7 @@ def lambda_handler(event, context):
 				DBSnapshotIdentifier=snap_id
 			)
 
-evento='{ "dbname":"koiboxpreprod","retencion":1 }'
+#
+# Esto es para pruebas en local. Desde AWS Lambda solo ejecutara lambda_handler
+evento='{ "dbname":"koiboxpreprod","retencion":14 }'
 lambda_handler(json.loads(evento),"kk")

@@ -18,6 +18,7 @@ def lambda_handler(event, context):
 	)
 	print (resp)
 
-
+#
+# Esto es para pruebas en local. Desde AWS Lambda solo ejecutara lambda_handler
 evento='{ "dbname":"koiboxpreprod" }'
 lambda_handler(json.loads(evento),"kk")
